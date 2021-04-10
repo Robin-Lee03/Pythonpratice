@@ -7,7 +7,7 @@ def read_file():
 
 word_count = 1
 lines = read_file()
-for i in lines[0]:
+for i in lines[0: ]:
     if i == ' ':
         word_count += 1
 print(lines)
