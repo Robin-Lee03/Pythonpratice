@@ -5,12 +5,13 @@ def read_file():
             lines.append(line.strip())
         return lines
 
-word_count = 1
+word_count = 0
 lines = read_file()
-for i in lines[0: ]:
-    if i == ' ':
-        word_count += 1
+for i in lines:
+    for letter in i:
+        if letter == ' ':
+            word_count += 1
+
 print(lines)
 print('總共有', len(lines), '行')
-print('總共有', word_count, '個字')
-
+print('總共有', word_count+len(lines),'個字')
